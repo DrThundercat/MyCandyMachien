@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyCandyMachien</string>
+    <string name="directions">Pick a candy</string>
+    <string name="button1text">gumball</string>
+    <string name="button2text">gum</string>
+    <string name="button3text">gummies</string>
+    <string name="button4text">Nerds candy</string>
+</resources>
