@@ -14,47 +14,34 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_marginTop="20dp"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:text="@string/directions"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        />
+
+    <Spinner
+        android:id="@+id/Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:entries="@array/Candy_list"
+        android:layout_gravity="center"
+        android:prompt="@string/Prompt"
+        />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="getGummball"
-        android:gravity="left"
+        android:onClick="getCandy"
+        android:layout_gravity="center"
         android:text="@string/button1text"
-        android:layout_marginTop="25dp"/>
+        android:layout_marginTop="25dp"
+        />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="getGum"
-        android:gravity="left"
-        android:text="@string/button2text"
-        android:layout_marginTop="25dp"/>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="getGummies"
-        android:gravity="left"
-        android:text="@string/button3text"
-        android:layout_marginTop="25dp"/>
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="getNerdsCandy"
-        android:gravity="left"
-        android:text="@string/button4text"
-        android:layout_marginTop="25dp"/>
 
 </LinearLayout>

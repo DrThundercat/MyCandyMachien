@@ -1,13 +1,11 @@
 package com.example.mycandymachien;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Spinner;
 
-import java.util.List;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,35 +16,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void getGummball(View view)
-    {
-        TextView textView = (TextView) findViewById(R.id.textView);
-        View button = (Button) findViewById(R.id.button1);
-        String gumball =  getString(R.string.button1text);
-        textView.setText(gumball);
-    }
 
-    public void getGum(View view)
+    public void getCandy(View view)
     {
-        TextView textView = (TextView) findViewById(R.id.textView);
-        View button = (Button) findViewById(R.id.button2);
-        String gum =  getString(R.string.button2text);
-        textView.setText(gum);
-    }
+        ProcessChoice logic = new ProcessChoice();
+        Intent intent = new Intent(this,ResultScreen.class);
+        Spinner spin = findViewById(R.id.Spinner);
+        String candy = spin.getSelectedItem().toString();
+        String result = logic.gettingCandy(candy);
 
-    public void getGummies(View view)
-    {
-        TextView textView = findViewById(R.id.textView);
-        Button button = findViewById(R.id.button3);
-        String gummies =  button.getText().toString();
-        textView.setText(gummies);
-    }
-
-    public void getNerdsCandy(View view)
-    {
-        TextView textView = findViewById(R.id.textView);
-        Button button =findViewById(R.id.button4);
-        String nerdsCandy =  button.getText().toString();
-        textView.setText(nerdsCandy);
+        intent.putExtra("message",result);
+        startActivity(intent);
     }
 }
